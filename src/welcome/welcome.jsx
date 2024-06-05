@@ -1,7 +1,7 @@
 import React from "react";
 import { Pressable, View, Text, Image, StyleSheet } from "react-native";
 import { Link } from "expo-router"; // Assuming you are using expo-router for navigation
-import title from "../../assets/vvp.title.white.svg"; // Ensure this is the correct path
+import title from "../../assets/splash.png"; // Ensure this is the correct path
 
 export function Welcome() {
   return (
@@ -32,9 +32,10 @@ const styles = StyleSheet.create({
     height: "100%",
   },
   image: {
-    width: "30px",
-    resizeMode: "contain",
-    marginBottom: 20, // Added margin to simulate gap between image and buttons
+    width: 100, // Use explicit values for testing
+    height: 100,
+    borderColor: "red", // Add a border to see the image's position
+    borderWidth: 1,
   },
   button: {
     backgroundColor: "#F5F5FF",

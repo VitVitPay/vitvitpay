@@ -1,15 +1,12 @@
-import { Button, View, Text } from "react-native"
+import { Button, View, Text, Pressable } from "react-native";
+import { Link } from "expo-router";
 
 export function Welcome(){
 
     return (
         <View style={{margin: 'auto'}}>
-            <Button title='signup'> 
-                <Text> Signup </Text> 
-            </Button>
-            <Button title='login'> 
-                <Text> Login </Text> 
-            </Button>
+            <Link href='/signup'> Signup </Link>
+            <Link href='/login'> Login </Link>
         </View>
     )
 }

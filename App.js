@@ -1,12 +1,20 @@
-import React from 'react';
-import {Alert, Button, StyleSheet, Text, View} from 'react-native';
-import { Welcome } from './src/welcome/welcome';
-import config from './auth0-configuration';
+import { StatusBar } from 'expo-status-bar';
+import { StyleSheet, Text, View } from 'react-native';
+import { Welcome } from './src/welcome/welcome'
 
-const App = () => {
+export default function App() {
   return (
-      <Welcome />
+    <View style={styles.container}>
+      <Welcome></Welcome>
+    </View>
   );
-};
+}
 
-export default App;
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+});

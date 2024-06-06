@@ -1,12 +1,15 @@
 import React from "react";
 import { Pressable, View, Text, Image, StyleSheet } from "react-native";
 import { Link } from "expo-router"; // Assuming you are using expo-router for navigation
-import title from "../../assets/splash.png"; // Ensure this is the correct path
+import title from "../../assets/vvp.trio.coin.png"; // Ensure this is the correct path
 
 export function Welcome() {
   return (
     <View style={styles.welcome}>
-      <Image style={styles.image} source={title} alt="Vit Vit pay title logo" />
+      <Image
+        style={styles.image}
+        source={require("../../assets/vvp.trio.coin.png")}
+      />
       <Link href="/signup" asChild>
         <Pressable style={styles.button}>
           <Text style={styles.buttonText}>Sign Up</Text>
@@ -27,15 +30,17 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     backgroundColor: "#B0B2FF", // Background color if needed
-    padding: "20px",
+    padding: 20,
     width: "100%",
     height: "100%",
   },
   image: {
     width: 100, // Use explicit values for testing
     height: 100,
-    borderColor: "red", // Add a border to see the image's position
+    borderColor: "#000", // Add a border to see the image's position
     borderWidth: 1,
+    accessibilityLabel: "Vit Vit pay title logo",
+    resizeMode: "contain",
   },
   button: {
     backgroundColor: "#F5F5FF",

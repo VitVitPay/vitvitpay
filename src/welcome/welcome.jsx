@@ -4,20 +4,22 @@ import { Link } from "expo-router"; // Assuming you are using expo-router for na
 import title from "../../assets/vvp.trio.coin.png"; // Ensure this is the correct path
 
 export function Welcome() {
+  console.log(title);
   return (
     <View style={styles.welcome}>
       <Image
         style={styles.image}
-        source={require("../../assets/vvp.trio.coin.png")}
+        source={title}
+        // source={require("../../assets/vvp.trio.coin.png")}
       />
       <Link href="/signup" asChild>
-        <Pressable style={styles.button}>
-          <Text style={styles.buttonText}>Sign Up</Text>
+        <Pressable style={styles.signupButton}>
+          <Text style={styles.signupText}>Sign Up</Text>
         </Pressable>
       </Link>
       <Link href="/login" asChild>
-        <Pressable style={styles.button}>
-          <Text style={styles.buttonText}>Log In</Text>
+        <Pressable style={styles.loginButton}>
+          <Text style={styles.loginText}>Log In</Text>
         </Pressable>
       </Link>
     </View>
@@ -35,24 +37,39 @@ const styles = StyleSheet.create({
     height: "100%",
   },
   image: {
-    width: 100, // Use explicit values for testing
-    height: 100,
+    width: 300, // Use explicit values for testing
+    height: 300,
     borderColor: "#000", // Add a border to see the image's position
     borderWidth: 1,
     accessibilityLabel: "Vit Vit pay title logo",
-    resizeMode: "contain",
+    resizeMode: "cover",
   },
-  button: {
-    backgroundColor: "#F5F5FF",
+  signupButton: {
+    backgroundColor: "#4F46CC",
     padding: 16,
     borderRadius: 30,
     marginVertical: 10,
+    width: "40%",
   },
-  buttonText: {
+  loginButton: {
+    backgroundColor: "#7D83F4",
+    padding: 16,
+    borderRadius: 30,
+    marginVertical: 10,
+    width: "40%",
+  },
+  signupText: {
     fontSize: 25,
     fontStyle: "normal",
     fontWeight: "600",
-    color: "#7D83F4",
+    color: "#E7E8FE",
+    textAlign: "center",
+  },
+  loginText: {
+    fontSize: 25,
+    fontStyle: "normal",
+    fontWeight: "600",
+    color: "#E7E8FE",
     textAlign: "center",
   },
 });

@@ -1,5 +1,6 @@
 import React from "react";
 import { Pressable, View, Text, Image, StyleSheet } from "react-native";
+import { LoginButton, SignupButton } from '../components/Button';
 import { Link } from "expo-router"; // Assuming you are using expo-router for navigation
 
 export function Welcome() {
@@ -10,14 +11,10 @@ export function Welcome() {
         style={styles.image}
       />
       <Link href="/signup" asChild>
-        <Pressable style={styles.signupButton}>
-          <Text style={styles.signupText}>Sign Up</Text>
-        </Pressable>
+        <LoginButton text='Login'></LoginButton>
       </Link>
       <Link href="/login" asChild>
-        <Pressable style={styles.loginButton}>
-          <Text style={styles.loginText}>Log In</Text>
-        </Pressable>
+        <SignupButton text='Sign Up'></SignupButton>
       </Link>
     </View>
   );

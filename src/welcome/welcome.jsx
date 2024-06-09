@@ -1,6 +1,7 @@
 import React from "react";
 import { Pressable, View, Text, Image, StyleSheet } from "react-native";
 import { LoginButton, SignupButton } from '../components/Button';
+import { HomeNavBar } from '../components/Navbar';
 import { Link } from "expo-router"; // Assuming you are using expo-router for navigation
 
 export function Welcome() {
@@ -38,34 +39,6 @@ const styles = StyleSheet.create({
     resizeMode: "contain",
     accessibilityLabel: "Vit Vit pay coin logo",
     marginBottom: "30%",
-  },
-  signupButton: {
-    backgroundColor: "#4F46CC",
-    padding: 16,
-    borderRadius: 30,
-    marginVertical: 10,
-    width: "40%",
-  },
-  loginButton: {
-    backgroundColor: "#7D83F4",
-    padding: 16,
-    borderRadius: 30,
-    marginVertical: 10,
-    width: "40%",
-  },
-  signupText: {
-    fontSize: 25,
-    fontStyle: "normal",
-    fontWeight: "600",
-    color: "#E7E8FE",
-    textAlign: "center",
-  },
-  loginText: {
-    fontSize: 25,
-    fontStyle: "normal",
-    fontWeight: "600",
-    color: "#E7E8FE",
-    textAlign: "center",
   },
 });
 

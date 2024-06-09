@@ -1,16 +1,14 @@
 import React from "react";
 import { Pressable, View, Text, Image, StyleSheet } from "react-native";
 import { Link } from "expo-router"; // Assuming you are using expo-router for navigation
-import title from "../../assets/vvp.trio.coin.png"; // Ensure this is the correct path
 
 export function Welcome() {
-  console.log(title);
   return (
     <View style={styles.welcome}>
       <Image
-        style={styles.image}
-        source={title}
-        // source={require("../../assets/vvp.trio.coin.png")}
+        source={require("../../assets/vvp.trio.coin.png")}
+        // style={styles.image}
+        style={{ width: 300, height: 300 }}
       />
       <Link href="/signup" asChild>
         <Pressable style={styles.signupButton}>
@@ -28,7 +26,8 @@ export function Welcome() {
 
 const styles = StyleSheet.create({
   welcome: {
-    flex: 1,
+    display: "flex",
+    flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
     backgroundColor: "#B0B2FF", // Background color if needed
@@ -36,14 +35,13 @@ const styles = StyleSheet.create({
     width: "100%",
     height: "100%",
   },
-  image: {
-    width: 300, // Use explicit values for testing
-    height: 300,
-    borderColor: "#000", // Add a border to see the image's position
-    borderWidth: 1,
-    accessibilityLabel: "Vit Vit pay title logo",
-    resizeMode: "cover",
-  },
+  //   image: {
+  //     width: "300px", // Use explicit values for testing
+  //     height: "300px",
+  //     borderColor: "#000", // Add a border to see the image's position
+  //     borderWidth: 1,
+  //     accessibilityLabel: "Vit Vit pay title logo",
+  //   },
   signupButton: {
     backgroundColor: "#4F46CC",
     padding: 16,

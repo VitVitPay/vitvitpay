@@ -7,8 +7,7 @@ export function Welcome() {
     <View style={styles.welcome}>
       <Image
         source={require("../../assets/vvp.trio.coin.png")}
-        // style={styles.image}
-        style={{ width: 300, height: 300 }}
+        style={styles.image}
       />
       <Link href="/signup" asChild>
         <Pressable style={styles.signupButton}>
@@ -31,17 +30,18 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     backgroundColor: "#B0B2FF", // Background color if needed
-    padding: 20,
+    paddingVertical: 40,
+    paddingHorizontal: 20,
     width: "100%",
     height: "100%",
   },
-  //   image: {
-  //     width: "300px", // Use explicit values for testing
-  //     height: "300px",
-  //     borderColor: "#000", // Add a border to see the image's position
-  //     borderWidth: 1,
-  //     accessibilityLabel: "Vit Vit pay title logo",
-  //   },
+  image: {
+    width: "350px", // Use explicit values for testing
+    height: "350px",
+    resizeMode: "contain",
+    accessibilityLabel: "Vit Vit pay coin logo",
+    marginBottom: "30%",
+  },
   signupButton: {
     backgroundColor: "#4F46CC",
     padding: 16,

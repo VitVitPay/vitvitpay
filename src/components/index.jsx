@@ -30,18 +30,7 @@ const formButtonStyle = StyleSheet.create({
     textAlign: "center",
   },
 });
-const navBarStyle = StyleSheet.create({
-  navBarIcon: {
-    width: 25,
-    height: 25,
-  },
-  navBarText: {
-    // color: focused ? "#7D83F4" : "#B0B2FF",
-    fontSize: 20,
-  },
-});
 
 module.exports = {
   formButtonStyle,
-  navBarStyle,
 };
